@@ -13,11 +13,11 @@ import org.junit.Test;
 import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 
 public class ClientIT {
-	
-	@Test
-	public void test1() throws Exception {    
-		Properties properties = new Properties();
-		properties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+    
+    @Test
+    public void test1() throws Exception {    
+        Properties properties = new Properties();
+        properties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
         properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
         properties.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
         properties.put(Context.SECURITY_PRINCIPAL, "admin");  
@@ -32,6 +32,5 @@ public class ClientIT {
         while (rs.next()) {
             System.out.println(rs.getString("sex"));
         }       
-	}
+    }
 }
-
